@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='yapsy',
-    version='1.12.2-py312',
+    version='1.12.2.post1',
     description='Fat-free DIY Python plugin management toolkit (patched for Python 3.12+)',
     author='Talossec (fork of Olivier Guilyardi)',
     url='https://github.com/talos-security/yapsy',
