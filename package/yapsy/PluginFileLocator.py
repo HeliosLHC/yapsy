@@ -525,14 +525,3 @@ class PluginFileLocator(IPluginLocator):
 		"""
 		self.plugins_places = list(set.union(set(directories_list), set(self.plugins_places)))
 
-	def setPluginInfoExtension(self, ext):
-		"""
-		DEPRECATED(>1.9): for backward compatibility. Directly configure the
-		IPluginLocator instance instead !
-
-		This will only work if the strategy "info_ext" is active
-		for locating plugins.
-		"""
-		for analyzer in self._analyzers:
-			if analyzer.name == "info_ext":
-				analyzer.setPluginInfoExtension(ext)

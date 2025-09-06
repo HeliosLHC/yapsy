@@ -85,14 +85,7 @@ class VersionedPluginManager(PluginManagerDecorator):
 		self._component.setCategoriesFilter(categories_filter)
 		self._prepareAttic()
 	
-	def getLatestPluginsOfCategory(self,category_name):
-		"""
-		DEPRECATED(>1.8): Please consider using getPluginsOfCategory
-		instead.
-		
-		Return the list of all plugins belonging to a category.
-		"""
-		return self.getPluginsOfCategory(category_name)
+
 	
 	def loadPlugins(self, callback=None, callback_after=None):
 		"""

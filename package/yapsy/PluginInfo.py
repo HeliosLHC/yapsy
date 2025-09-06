@@ -159,25 +159,7 @@ class PluginInfo(object):
 		return self.details.set("Documentation","Description",description)
 
 
-	def __getCategory(self):
-		"""
-		DEPRECATED (>1.9): Mimic former behaviour when what is
-		noz the first category was considered as the only one the
-		plugin belonged to.
-		"""		
-		if self.categories:
-			return self.categories[0]
-		else:
-			return "UnknownCategory"
-	
-	def __setCategory(self,c):
-		"""
-		DEPRECATED (>1.9): Mimic former behaviour by making so
-		that if a category is set as if it were the only category to
-		which the plugin belongs, then a __getCategory will return
-		this newly set category.
-		"""
-		self.categories = [c] + self.categories
+
 	
 	name = property(fget=__getName,fset=__setName)
 	path = property(fget=__getPath,fset=__setPath)
@@ -187,10 +169,7 @@ class PluginInfo(object):
 	website = property(fget=__getWebsite,fset=__setWebsite)
 	description = property(fget=__getDescription,fset=__setDescription)
 	details = property(fget=__getDetails,fset=__setDetails)
-	# deprecated (>1.9): plugins are not longer associated to a
-	# single category !
-	category = property(fget=__getCategory,fset=__setCategory)
-	
+
 	def _getIsActivated(self):
 		"""
 		Return the activated state of the plugin object.
