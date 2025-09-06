@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name='yapsy',
-    version='1.12.2.post1',
-    description='Fat-free DIY Python plugin management toolkit (patched for Python 3.12+)',
-    author='Talossec (fork of Olivier Guilyardi)',
+    version='2.0.0.at',
+    description='Fat-free DIY Python plugin management toolkit (ArchiveTeam fork)',
+    author='HeliosLHC (fork of Talos Security for of Yapsy)',
     url='https://github.com/talos-security/yapsy',
     packages=find_packages(),
     classifiers=[
