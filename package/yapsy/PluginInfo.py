@@ -11,7 +11,7 @@ API
 ===
 """
 
-from yapsy.compat import ConfigParser
+from configparser import ConfigParser
 try:
 	from distutils.version import StrictVersion
 except ImportError:
