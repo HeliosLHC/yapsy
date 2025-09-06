@@ -15,7 +15,6 @@ API
 import multiprocessing as mproc
 
 from yapsy.IMultiprocessPlugin import IMultiprocessPlugin
-from yapsy.IMultiprocessChildPlugin import IMultiprocessChildPlugin
 from yapsy.MultiprocessPluginProxy import MultiprocessPluginProxy
 from yapsy.PluginManager import  PluginManager
 
@@ -58,9 +57,6 @@ class MultiprocessPluginManager(PluginManager):
 		
 		See ``IMultiprocessPlugin``.
 		"""
-		if element is IMultiprocessChildPlugin:
-			# The following will keep retro compatibility for IMultiprocessChildPlugin
-			raise Exception("Preventing instanciation of a bar child plugin interface.")
 		instanciated_element = MultiprocessPluginProxy()
 		parent_pipe, child_pipe = mproc.Pipe()
 		instanciated_element.child_pipe = parent_pipe
