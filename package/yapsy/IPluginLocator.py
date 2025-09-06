@@ -44,7 +44,6 @@ class IPluginLocator(object):
 		raise NotImplementedError("gatherPluginInfo must be reimplemented by %s" % self)
 	
 	# --------------------------------------------------------------------
-	# Below are backward compatibility methods: if you inherit from
 	# IPluginLocator it's ok not to reimplement them, there will only
 	# be a warning message logged if they are called and not
 	# reimplemented.
